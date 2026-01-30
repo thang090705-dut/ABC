@@ -32,3 +32,7 @@ int main() {
     }
     return 0;
 }
+
+//cd d:\OOP_VScode\PBL_ITFAW
+//g++ ITF_airway.cpp ITF_airway_func.cpp -o main
+//.\main.exe

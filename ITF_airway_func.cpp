@@ -183,7 +183,7 @@ void FileManager::printFileContent(const char* ghe_ngoi){
 // --- SystemManager Implementation ---
 void SystemManager::openFlight(){
     flight.inputFlight();
-    if (!fileManager.loadSeatMap("d:\\OOP_VScode\\ghe_ngoi.txt", seatManager, ticketManager)) {
+    if (!fileManager.loadSeatMap("D:\\OOP_VScode\\PBL_ITFAW\\ghe_ngoi.txt", seatManager, ticketManager)) {
         cout << "Khong the tai du lieu ghe tu file!" << endl;
     }
     flight.displayFlightInfo();
@@ -245,14 +245,14 @@ void SystemManager::bookingProcess(){
 }
 
 void SystemManager::closeFlight(){
-    if (fileManager.saveSeatMap("d:\\OOP_VScode\\ghe_ngoi.txt", seatManager)) {
+    if (fileManager.saveSeatMap("D:\\OOP_VScode\\PBL_ITFAW\\ghe_ngoi.txt", seatManager)) {
         cout << "Đã lưu trạng thái ghế và mã vé vào file ghe_ngoi.txt" << endl;            
         
         cout << "Bạn có muốn xem nội dung file ánh xạ không? (y/n): ";
         char c;
         cin >> c;
         if (c == 'y' || c == 'Y')
-            fileManager.printFileContent("d:\\OOP_VScode\\ghe_ngoi.txt");
+            fileManager.printFileContent("D:\\OOP_VScode\\PBL_ITFAW\\ghe_ngoi.txt");
     }
     else {
         cout << "Lỗi lưu file" << endl;
